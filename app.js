@@ -19,7 +19,7 @@ const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
 const salt = bcrypt.genSaltSync(10);
 const uploadMiddleware = multer({ destination: "uploads/" });
 // /^(http(s):\/\/.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/
-app.use(cors({ credentials: true, origin: "https://blog-gokulrajs.netlify.app/" }));
+app.use(cors({ credentials: true, origin: "https://blog-gokulrajs.netlify.app" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
